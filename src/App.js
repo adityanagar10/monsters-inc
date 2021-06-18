@@ -10,7 +10,7 @@ class App extends Component{
     super();
     this.state = { 
       monster: [],
-      searchField: ``
+      searchField: ""
     }
 
   }
@@ -27,6 +27,7 @@ class App extends Component{
     var filteredMonsters = monster.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()))
     return (  
     <div className="App">
+    <h1> Monsters Inc.</h1>
     <Search placeholder="Search Monsters" handleChange={a => this.setState({searchField: a.target.value})}/>
     <Card monsters={filteredMonsters}>
     </Card>
